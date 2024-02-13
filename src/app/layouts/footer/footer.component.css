@@ -2,7 +2,8 @@ footer {
   height: 130px;
   padding: 15px;
   background-color: var(--navbar-footer-color);
-  margin-top: 85vh;
+  /* position: absolute;
+  bottom: 2em; */
 }
 
 .site-logo {

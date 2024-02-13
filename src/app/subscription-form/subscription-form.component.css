@@ -16,13 +16,9 @@ input[type="email"] {
   width: 100%;
 }
 
-/* .form-control {
-  width: 50%;
-} */
-
 .btn-sub {
   height: 58px;
-  width: 150px;
+  width: 120px;
   border: none;
   font-size: 13px;
   background-color: var(--primary-color);
