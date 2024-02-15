@@ -8,23 +8,6 @@
   display: flex;
 }
 
-input[type="text"],
-input[type="email"] {
-  height: 60px;
-  padding-left: 20px;
-  font-size: 13px;
-  width: 100%;
-}
-
-.btn-sub {
-  height: 58px;
-  width: 120px;
-  border: none;
-  font-size: 13px;
-  background-color: var(--primary-color);
-  color: white;
-}
-
 .subs-text {
   width: 500px;
 }
