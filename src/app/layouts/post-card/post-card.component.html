@@ -1,23 +1,24 @@
-<div class="card">
-  <img
-    src="https://images.pexels.com/photos/19899301/pexels-photo-19899301/free-photo-of-a-bunch-of-white-lanterns-hanging-from-a-tree.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    alt="post-image"
-    class="card-img-top"
-  />
+<div class="card shadow-eefect" *ngIf="postData">
+  <img [src]="postImgUrl" alt="post-image" class="card-img-top" />
 
   <div class="card-body">
-    <small class="bg-light text-danger text-center">Design</small>
+    <small class="bg-light text-danger text-center">{{
+      postData.data.category.category
+    }}</small>
     <small class="bg-light text-success text-center ms-3">Featured</small>
-    <small class="bg-light text-info text-center ms-3">Views - 100,225</small>
+    <small class="bg-light text-info text-center ms-3">{{
+      postData.data.views
+    }}</small>
 
-    <h5 class="mt-1">HOW TO START A BLOG IN 2021 EDITED NEW CATEGORY</h5>
+    <h5 class="mt-1">
+      {{ postData.data.title }}
+    </h5>
     <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus expedita
-      optio quibusdam officiis dolorem impedit. Animi aperiam hic in quidem!
+      {{ postData.data.excerpt }}
     </p>
 
-    <small class="bg-light text-warning text-center ms-3"
-      >LAST UPDATED - SEP 20,2021</small
+    <small class="bg-light text-warning text-center"
+      >LAST UPDATED - {{ postData.data.createdAt.toMillis() | date }}</small
     >
   </div>
 </div>
