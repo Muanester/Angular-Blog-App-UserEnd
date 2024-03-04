@@ -12,7 +12,11 @@
           <small class="bg-light text-danger text-center">{{
             singlePostData?.category.category
           }}</small>
-          <small class="bg-light text-success text-center ms-2">Featured</small>
+          <small
+            class="bg-light text-success text-center ms-2"
+            *ngIf="singlePostData?.isFeatured"
+            >Featured</small
+          >
           <small class="bg-light text-info text-center ms-2"
             >Views - {{ singlePostData?.views }}</small
           >

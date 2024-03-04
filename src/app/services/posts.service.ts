@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs';
 
+import * as firebase from 'firebase/app';
+import { increment } from '@angular/fire/firestore';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -80,5 +83,17 @@ export class PostsService {
           });
         })
       );
+  }
+
+  countViews(postId: any) {
+    const viewsCount = {
+      views: increment(1),
+    };
+
+    this.afs
+      .collection('posts')
+      .doc(postId)
+      .update(viewsCount)
+      .then(() => {});
   }
 }
